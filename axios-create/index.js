@@ -5,12 +5,13 @@ dotenv.config();
 
 const githubClient = axios.create({
     baseURL: 'https://api.GitHub.com',
-    timeout: 1000,
+    timeout: 10000,
     headers: {
         'Accept': 'application/vnd.GitHub.v3+json',    
-        'Authorization': `token ${process.env.GITHUB_TOKEN}`
+        // 'Authorization': `token ${process.env.GITHUB_TOKEN}`
     }
 });
+
 
 async function getMostFollowers() {
     const noOfFollowers = 35000;
@@ -20,7 +21,7 @@ async function getMostFollowers() {
 }
 
 async function getCounts(username) {
-    const response = await githubClient.get(`user/${username}`);
+    const response = await githubClient.get(`users/${username}`);
     return {
         username,
         name: response.data.name,
@@ -36,7 +37,7 @@ async function getCounts(username) {
         const popularWithPublicRepo = await Promise.all(popularUserNames.map(getCounts));
         console.table(popularWithPublicRepo);
         console.log('======== Another view ==========');
-        popularWithPublicRepo.forEach((user)=>console.log(`${userWithPublicRepos.name} with username ${userWithPublicRepos.username} has ${userWithPublicRepos.publicReposCount} public repos and ${userWithPublicRepos.followersCount} followers on GitHub`));
+        popularWithPublicRepo.forEach((user)=>console.log(`${user.name} with username ${user.username} has ${user.publicReposCount} public repos and ${user.followersCount} followers on GitHub`));
     } catch(error) {
         console.log(`Error calling GitHub API: ${error.message}`, error);
     }
