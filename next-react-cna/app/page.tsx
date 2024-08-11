@@ -1,26 +1,12 @@
-import Link from "next/link";
+import { Suspense } from "react";
 
 export default function Home() {
-  return (
-    <section>
-      <h1>All Quizzes</h1>
-      <ul>
-        <li>
-          <Link href="/quiz/1">
-            Quiz 1
-          </Link>
-        </li>
-        <li>
-          <Link href="/quiz/2">
-            Quiz 2
-          </Link>
-        </li>
-        <li>
-          <Link href="/quiz/3">
-            Quiz 3
-          </Link>
-        </li>
-      </ul>
-    </section>
-  );
+	return (
+		<section>
+			<h1 className="text-2xl font-semibold">All Quizzes</h1>
+			<Suspense fallback={<p>LOADER...</p>}>
+				{/*  <Quizzes /> */}
+			</Suspense>
+		</section>
+	);
 }

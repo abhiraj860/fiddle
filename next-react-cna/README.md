@@ -1,36 +1,43 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Seed Script
 
-## Getting Started
 
-First, run the development server:
+CREATE TABLE IF NOT EXISTS quizzes (
+quiz_id SERIAL PRIMARY KEY,
+title VARCHAR(255) NOT NULL,
+description TEXT,
+question_text TEXT NOT NULL,
+created_at TIMESTAMPTZ DEFAULT NOW());    
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+CREATE TABLE IF NOT EXISTS answers (
+answer_id SERIAL PRIMARY KEY,
+quiz_id INT REFERENCES quizzes(quiz_id) ON DELETE CASCADE,
+answer_text TEXT NOT NULL,
+is_correct BOOLEAN NOT NULL); 
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+INSERT INTO quizzes (title, description, question_text)
+VALUES 
+('Programming Quiz 1', 'Basic programming concepts', 'What is the output of the following code in Python? print(2 + 3 * 4)'),
+('Programming Quiz 2', 'Basic programming concepts', 'Which of the following is a loop structure in JavaScript?'),
+('Programming Quiz 3', 'Basic programming concepts', 'What is the correct syntax to define a function in Python?');
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
 
-## Learn More
+INSERT INTO answers (quiz_id, answer_text, is_correct)
+VALUES 
+-- For Quiz 1
+(1, '14', TRUE),  -- Correct answer: 2 + (3 * 4) = 14
+(1, '20', FALSE),
+(1, '10', FALSE),
+(1, '12', FALSE),
 
-To learn more about Next.js, take a look at the following resources:
+-- For Quiz 2
+(2, 'if-else', FALSE),
+(2, 'for', TRUE),  -- Correct answer: 'for' is a loop structure
+(2, 'switch', FALSE),
+(2, 'break', FALSE),
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+-- For Quiz 3
+(3, 'function myFunc():', FALSE),
+(3, 'def myFunc():', TRUE),  -- Correct answer: 'def myFunc():'
+(3, 'func myFunc():', FALSE),
+(3, 'def: myFunc()', FALSE);

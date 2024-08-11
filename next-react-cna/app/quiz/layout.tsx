@@ -5,7 +5,7 @@ export default function NestedLayout({
 }) {
 	return (
 		<nav>
-			This is my navigation
+			<p className="ml-4">Navigation for quiz page</p>
 			{children}
 		</nav>
 	);
