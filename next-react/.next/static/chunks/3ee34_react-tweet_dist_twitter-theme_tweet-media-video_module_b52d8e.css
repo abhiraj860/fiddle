@@ -1,0 +1,80 @@
+/* [project]/node_modules/.pnpm/react-tweet@3.2.1_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/react-tweet/dist/twitter-theme/tweet-media-video.module.css [app-client] (css) */
+.tweet-media-video-module__C5sE2q__anchor {
+  display: flex;
+  align-items: center;
+  color: #fff;
+  padding: 0 1rem;
+  border: 1px solid #0000;
+  border-radius: 9999px;
+  font-weight: 700;
+  transition: background-color .2s;
+  cursor: pointer;
+  user-select: none;
+  outline-style: none;
+  text-decoration: none;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.tweet-media-video-module__C5sE2q__videoButton {
+  position: relative;
+  height: 67px;
+  width: 67px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--tweet-color-blue-primary);
+  transition-property: background-color;
+  transition-duration: .2s;
+  border: 4px solid #fff;
+  border-radius: 9999px;
+  cursor: pointer;
+}
+
+.tweet-media-video-module__C5sE2q__videoButton:hover, .tweet-media-video-module__C5sE2q__videoButton:focus-visible {
+  background-color: var(--tweet-color-blue-primary-hover);
+}
+
+.tweet-media-video-module__C5sE2q__videoButtonIcon {
+  margin-left: 3px;
+  width: calc(50% + 4px);
+  height: calc(50% + 4px);
+  max-width: 100%;
+  color: #fff;
+  fill: currentColor;
+  user-select: none;
+}
+
+.tweet-media-video-module__C5sE2q__watchOnTwitter {
+  position: absolute;
+  top: 12px;
+  right: 8px;
+}
+
+.tweet-media-video-module__C5sE2q__watchOnTwitter > a {
+  min-width: 2rem;
+  min-height: 2rem;
+  font-size: .875rem;
+  line-height: 1rem;
+  backdrop-filter: blur(4px);
+  background-color: #0f1419bf;
+}
+
+.tweet-media-video-module__C5sE2q__watchOnTwitter > a:hover {
+  background-color: #272c30bf;
+}
+
+.tweet-media-video-module__C5sE2q__viewReplies {
+  position: relative;
+  min-height: 2rem;
+  background-color: var(--tweet-color-blue-primary);
+  border-color: var(--tweet-color-blue-primary);
+  font-size: .9375rem;
+  line-height: 1.25rem;
+}
+
+.tweet-media-video-module__C5sE2q__viewReplies:hover {
+  background-color: var(--tweet-color-blue-primary-hover);
+}
+
+/*# sourceMappingURL=3ee34_react-tweet_dist_twitter-theme_tweet-media-video_module_b52d8e.css.map*/

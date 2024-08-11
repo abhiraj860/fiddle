@@ -1,0 +1,65 @@
+/* [project]/node_modules/.pnpm/react-tweet@3.2.1_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/react-tweet/dist/twitter-theme/tweet-media.module.css [app-ssr] (css) */
+.tweet-media-module__1BuFiW__root {
+  margin-top: .75rem;
+  overflow: hidden;
+  position: relative;
+}
+
+.tweet-media-module__1BuFiW__rounded {
+  border: var(--tweet-border);
+  border-radius: 12px;
+}
+
+.tweet-media-module__1BuFiW__mediaWrapper {
+  display: grid;
+  grid-auto-rows: 1fr;
+  gap: 2px;
+  height: 100%;
+  width: 100%;
+}
+
+.tweet-media-module__1BuFiW__grid2Columns {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.tweet-media-module__1BuFiW__grid3 > a:first-child {
+  grid-row: span 2;
+}
+
+.tweet-media-module__1BuFiW__grid2x2 {
+  grid-template-rows: repeat(2, 1fr);
+}
+
+.tweet-media-module__1BuFiW__mediaContainer {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.tweet-media-module__1BuFiW__mediaLink {
+  text-decoration: none;
+  outline-style: none;
+}
+
+.tweet-media-module__1BuFiW__skeleton {
+  padding-bottom: 56.25%;
+  width: 100%;
+  display: block;
+}
+
+.tweet-media-module__1BuFiW__image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  object-fit: cover;
+  object-position: center;
+}
+
+/*# sourceMappingURL=3ee34_react-tweet_dist_twitter-theme_tweet-media_module_31ffea.css.map*/

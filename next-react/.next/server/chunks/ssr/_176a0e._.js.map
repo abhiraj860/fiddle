@@ -1,0 +1,13 @@
+{
+  "version": 3,
+  "sources": [],
+  "sections": [
+    {"offset": {"line": 5, "column": 0}, "map": {"version":3,"sources":["/turbopack/[project]/app/layout.js"],"sourcesContent":["export default function Rootlayout({ children }) {\r\n\treturn (\r\n\t\t<html lang=\"en\">\r\n\t\t\t<body>{children}</body>\r\n\t\t</html>\r\n\t);\r\n}\r\n"],"names":[],"mappings":";;;;;;AAAe,SAAS,WAAW,EAAE,QAAQ,EAAE;IAC9C,qBACC,uXAAC;QAAK,MAAK;kBACV,cAAA,uXAAC;sBAAM;;;;;;;;;;;AAGV"}},
+    {"offset": {"line": 27, "column": 0}, "map": {"version":3,"sources":[],"names":[],"mappings":"A"}},
+    {"offset": {"line": 39, "column": 0}, "map": {"version":3,"sources":["/turbopack/[project]/app/header.js"],"sourcesContent":["export function Header({ children }) {\r\n\treturn (\r\n\t\t<header>\r\n            This is the children component \r\n            {children}\r\n            This is the second header\r\n\t\t</header>\r\n\t);\r\n}"],"names":[],"mappings":";;;;;;AAAO,SAAS,OAAO,EAAE,QAAQ,EAAE;IAClC,qBACC,uXAAC;;YAAO;YAEG;YAAS;;;;;;;AAItB"}},
+    {"offset": {"line": 58, "column": 0}, "map": {"version":3,"sources":[],"names":[],"mappings":"A"}},
+    {"offset": {"line": 63, "column": 0}, "map": {"version":3,"sources":["/turbopack/[project]/app/page.js"],"sourcesContent":["import { Header } from \"./header\";\r\nimport { Tweet } from \"react-tweet\";\r\n\r\nexport default function Page() {\r\n\treturn (\r\n\t\t<section>\r\n\t\t\t<Header>\r\n\t\t\t\t<h1>Abhiraj!!!!!!!!</h1>\r\n\t\t\t</Header>\r\n\t\t\t<p>This is my site</p>\r\n            <Tweet id=\"1354143047324299264\" />\r\n\t\t</section>\r\n\t);\r\n}\r\n"],"names":[],"mappings":";;;;;;;;;;AAGe,SAAS;IACvB,qBACC,uXAAC;;0BACA,uXAAC,6GAAA,CAAA,SAAM;0BACN,cAAA,uXAAC;8BAAG;;;;;;;;;;;0BAEL,uXAAC;0BAAE;;;;;;0BACM,uXAAC,uRAAA,CAAA,QAAK;gBAAC,IAAG;;;;;;;;;;;;AAGtB"}},
+    {"offset": {"line": 110, "column": 0}, "map": {"version":3,"sources":[],"names":[],"mappings":"A"}},
+    {"offset": {"line": 121, "column": 0}, "map": {"version":3,"sources":["/turbopack/[project]/.next-internal/server/app/page/actions.js"],"sourcesContent":["__turbopack_export_value__({\n});"],"names":[],"mappings":"AAAA,2BAA2B,CAC3B"}},
+    {"offset": {"line": 122, "column": 0}, "map": {"version":3,"sources":[],"names":[],"mappings":"A"}}]
+}

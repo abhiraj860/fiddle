@@ -1,0 +1,95 @@
+/* [project]/node_modules/.pnpm/react-tweet@3.2.1_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/react-tweet/dist/twitter-theme/tweet-actions.module.css [app-ssr] (css) */
+.tweet-actions-module__aoCzpa__actions {
+  display: flex;
+  align-items: center;
+  color: var(--tweet-font-color-secondary);
+  padding-top: .25rem;
+  margin-top: .25rem;
+  border-top: var(--tweet-border);
+  overflow-wrap: break-word;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.tweet-actions-module__aoCzpa__like, .tweet-actions-module__aoCzpa__reply, .tweet-actions-module__aoCzpa__copy {
+  text-decoration: none;
+  color: inherit;
+  display: flex;
+  align-items: center;
+  margin-right: 1.25rem;
+}
+
+.tweet-actions-module__aoCzpa__like:hover, .tweet-actions-module__aoCzpa__reply:hover, .tweet-actions-module__aoCzpa__copy:hover {
+  background-color: #0000;
+}
+
+.tweet-actions-module__aoCzpa__like:hover > .tweet-actions-module__aoCzpa__likeIconWrapper {
+  background-color: var(--tweet-color-red-primary-hover);
+}
+
+.tweet-actions-module__aoCzpa__like:hover > .tweet-actions-module__aoCzpa__likeCount {
+  color: var(--tweet-color-red-primary);
+  text-decoration-line: underline;
+}
+
+.tweet-actions-module__aoCzpa__likeIconWrapper, .tweet-actions-module__aoCzpa__replyIconWrapper, .tweet-actions-module__aoCzpa__copyIconWrapper {
+  width: var(--tweet-actions-icon-wrapper-size);
+  height: var(--tweet-actions-icon-wrapper-size);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: -.25rem;
+  border-radius: 9999px;
+}
+
+.tweet-actions-module__aoCzpa__likeIcon, .tweet-actions-module__aoCzpa__replyIcon, .tweet-actions-module__aoCzpa__copyIcon {
+  height: var(--tweet-actions-icon-size);
+  fill: currentColor;
+  user-select: none;
+}
+
+.tweet-actions-module__aoCzpa__likeIcon {
+  color: var(--tweet-color-red-primary);
+}
+
+.tweet-actions-module__aoCzpa__likeCount, .tweet-actions-module__aoCzpa__replyText, .tweet-actions-module__aoCzpa__copyText {
+  font-size: var(--tweet-actions-font-size);
+  font-weight: var(--tweet-actions-font-weight);
+  line-height: var(--tweet-actions-line-height);
+  margin-left: .25rem;
+}
+
+.tweet-actions-module__aoCzpa__reply:hover > .tweet-actions-module__aoCzpa__replyIconWrapper {
+  background-color: var(--tweet-color-blue-secondary-hover);
+}
+
+.tweet-actions-module__aoCzpa__reply:hover > .tweet-actions-module__aoCzpa__replyText {
+  color: var(--tweet-color-blue-secondary);
+  text-decoration-line: underline;
+}
+
+.tweet-actions-module__aoCzpa__replyIcon {
+  color: var(--tweet-color-blue-primary);
+}
+
+.tweet-actions-module__aoCzpa__copy {
+  font: inherit;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.tweet-actions-module__aoCzpa__copy:hover > .tweet-actions-module__aoCzpa__copyIconWrapper {
+  background-color: var(--tweet-color-green-primary-hover);
+}
+
+.tweet-actions-module__aoCzpa__copy:hover .tweet-actions-module__aoCzpa__copyIcon {
+  color: var(--tweet-color-green-primary);
+}
+
+.tweet-actions-module__aoCzpa__copy:hover > .tweet-actions-module__aoCzpa__copyText {
+  color: var(--tweet-color-green-primary);
+  text-decoration-line: underline;
+}
+
+/*# sourceMappingURL=3ee34_react-tweet_dist_twitter-theme_tweet-actions_module_31ffea.css.map*/

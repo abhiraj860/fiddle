@@ -1,0 +1,9 @@
+{
+  "version": 3,
+  "sources": [],
+  "sections": [
+    {"offset": {"line": 5, "column": 0}, "map": {"version":3,"sources":["/turbopack/[project]/app/layout.js"],"sourcesContent":["export default function Rootlayout({ children }) {\r\n\treturn (\r\n\t\t<html lang=\"en\">\r\n\t\t\t<body>{children}</body>\r\n\t\t</html>\r\n\t);\r\n}\r\n"],"names":[],"mappings":";;;;;;AAAe,SAAS,WAAW,EAAE,QAAQ,EAAE;IAC9C,qBACC,uXAAC;QAAK,MAAK;kBACV,cAAA,uXAAC;sBAAM;;;;;;;;;;;AAGV"}},
+    {"offset": {"line": 27, "column": 0}, "map": {"version":3,"sources":[],"names":[],"mappings":"A"}},
+    {"offset": {"line": 38, "column": 0}, "map": {"version":3,"sources":["/turbopack/[project]/.next-internal/server/app/_not-found/page/actions.js"],"sourcesContent":["__turbopack_export_value__({\n});"],"names":[],"mappings":"AAAA,2BAA2B,CAC3B"}},
+    {"offset": {"line": 39, "column": 0}, "map": {"version":3,"sources":[],"names":[],"mappings":"A"}}]
+}
