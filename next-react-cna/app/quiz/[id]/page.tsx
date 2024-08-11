@@ -1,9 +1,9 @@
-import Link from "next/link";
+import { redirect } from "next/navigation";
 import postgres from "postgres";
 
 const sql = postgres(process.env.DATABASE_URL!);
 
-async function Quizzes({ id }: { id: string }) {
+async function Quizzes({ id, show }: { id: string; show?: boolean }) {
 	await new Promise((r) => setTimeout(r, 2000));
 	const quizzes = await sql`SELECT
       q.quiz_id,
@@ -24,22 +24,36 @@ async function Quizzes({ id }: { id: string }) {
 			<p className="py-2">{quizzes[0].question_text}</p>
 			<ul>
 				{quizzes.map((answers) => (
-					<li key={answers.answer_id}>{answers.answer_text}</li>
+					<li key={answers.answer_id}>
+						<span>{answers.answer_text}</span>
+						{show && answers.is_correct && "✅"}
+					</li>
 				))}
 			</ul>
 		</div>
 	);
 }
 
-export default function QuizPage({ params }: { params: { id: string } }) {
+export default function QuizPage({
+	params,
+	searchParams,
+}: {
+	params: { id: string };
+	searchParams: { show?: boolean };
+}) {
 	return (
 		<section>
-			<Quizzes id={params.id} />
-			<Link href={"/"}>
-				<button className="border-red-600 border-2 p-2" type="submit">
-					Back
+			<Quizzes id={params.id} show={searchParams.show} />
+			<form
+				action={async () => {
+					"use server";
+					redirect(`/quiz/${params.id}?show=true`);
+				}}
+			>
+				<button className="bg-gray-200 py-2 px-2 rounded hover:pointer hover:bg-gray-300 transition-all m-2">
+					Show Answer
 				</button>
-			</Link>
+			</form>
 		</section>
 	);
 }
