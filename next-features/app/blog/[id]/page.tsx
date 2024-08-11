@@ -1,3 +1,10 @@
+export async function generateMetadata( {params}: {params: {id: string}} ) {
+    return {
+        title: 'My blog post'
+    };
+}
+
+
 export default function Page({
 	params,
 	searchParams,
