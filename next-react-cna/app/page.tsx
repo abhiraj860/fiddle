@@ -6,7 +6,7 @@ import QuizForm from "./quiz/quiz-form";
 const sql = postgres(process.env.DATABASE_URL!);
 
 async function Quizzes() {
-  await new Promise(r=>setTimeout(r, 1500));
+	await new Promise((r) => setTimeout(r, 1500));
 	const quizzes = await sql`SELECT * FROM quizzes`;
 	return (
 		<ul>
@@ -16,16 +16,16 @@ async function Quizzes() {
 				</li>
 			))}
 		</ul>
-	)
+	);
 }
 
 export default function Page() {
-  return (
+	return (
 		<section>
 			<h1 className="text-2xl font-semibold">All Quizzes</h1>
 			<Suspense fallback={<p>LOADER...</p>}>
 				<Quizzes />
-        <QuizForm />
+				<QuizForm />
 			</Suspense>
 		</section>
 	);

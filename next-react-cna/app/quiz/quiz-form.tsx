@@ -1,3 +1,4 @@
+import { revalidatePath } from "next/cache";
 import postgres from "postgres";
 
 function Answer({ id }: { id: number }) {
@@ -51,6 +52,7 @@ export default function QuizForm() {
                 ((SELECT quiz_id FROM inserted_quiz), ${values[5]}, ${values[6]}),
                 ((SELECT quiz_id FROM inserted_quiz), ${values[7]}, ${values[8]});`;
 		});
+		revalidatePath('/');
 	}
 	return (
 		<form action={createQuiz} className="mt-4 flex flex-col max-w-xs">
