@@ -1,3 +1,11 @@
+import Image from "next/image";
+
 export default function AboutPage() {
-    return <div>About Page</div>
+	return (
+		<div>
+			<div className="w-[400px] h-[400px] relative">
+				<Image alt="about image" src="/about.png" fill />
+			</div>
+		</div>
+	);
 }

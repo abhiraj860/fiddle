@@ -13,6 +13,7 @@ const config: Config = {
 			textcolor: "white",
 			textsoftcolor: "#e5e5e5",
 			btncolor: "#3673fd",
+			grey:"#94a3b8"
 		},
 		extend: {
 			backgroundImage: {
