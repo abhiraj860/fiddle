@@ -1,5 +1,5 @@
 export default function LoadingPage() {
     return <div>
-        Loading....
+        Loading..
     </div>
 }
