@@ -1,5 +1,5 @@
 import Image from "next/image";
-// about page image
+// about page next image
 export default function AboutPage() {
 	return (
 		<div>
